@@ -115,8 +115,10 @@ export default function QuotePage() {
       });
 
       setSubmitted(true);
-    } catch {
-      setError("Something went wrong. Please try again or call us directly.");
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : JSON.stringify(err);
+      console.error("Quote form error:", err);
+      setError(`Something went wrong: ${msg}`);
     } finally {
       setSubmitting(false);
     }
