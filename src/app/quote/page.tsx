@@ -38,8 +38,7 @@ export default function QuotePage() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const canProceedStep1 =
-    form.zipCode.length === 5 && form.crewSize && form.currentlyInsured;
+  const canProceedStep1 = form.crewSize && form.currentlyInsured;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -182,28 +181,6 @@ export default function QuotePage() {
               <p className="text-sm font-medium text-slate-500">
                 Step 1 of 2: About your business
               </p>
-
-              {/* Zip Code */}
-              <div>
-                <label
-                  htmlFor="zipCode"
-                  className="block text-sm font-medium text-slate-700"
-                >
-                  Zip Code <span className="text-red-500">*</span>
-                </label>
-                <input
-                  id="zipCode"
-                  name="zipCode"
-                  type="text"
-                  required
-                  maxLength={5}
-                  pattern="[0-9]{5}"
-                  value={form.zipCode}
-                  onChange={handleChange}
-                  placeholder="33101"
-                  className="mt-1 block w-full rounded-lg border border-slate-300 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
-                />
-              </div>
 
               {/* Crew Size */}
               <div>
@@ -355,6 +332,28 @@ export default function QuotePage() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="john@smithlandscaping.com"
+                  className="mt-1 block w-full rounded-lg border border-slate-300 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
+                />
+              </div>
+
+              {/* Zip Code */}
+              <div>
+                <label
+                  htmlFor="zipCode"
+                  className="block text-sm font-medium text-slate-700"
+                >
+                  Zip Code <span className="text-red-500">*</span>
+                </label>
+                <input
+                  id="zipCode"
+                  name="zipCode"
+                  type="text"
+                  required
+                  maxLength={5}
+                  pattern="[0-9]{5}"
+                  value={form.zipCode}
+                  onChange={handleChange}
+                  placeholder="33101"
                   className="mt-1 block w-full rounded-lg border border-slate-300 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
                 />
               </div>
