@@ -32,10 +32,21 @@ export default function QuotePage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
+  const formatPhone = (value: string) => {
+    const digits = value.replace(/\D/g, "").slice(0, 10);
+    if (digits.length <= 3) return digits;
+    if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+  };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    if (e.target.name === "phone") {
+      setForm({ ...form, phone: formatPhone(e.target.value) });
+    } else {
+      setForm({ ...form, [e.target.name]: e.target.value });
+    }
   };
 
   const canProceedStep1 = form.crewSize && form.currentlyInsured;
@@ -50,6 +61,7 @@ export default function QuotePage() {
       const pageUrl = window.location.href;
 
       const leadId = crypto.randomUUID();
+      const rawPhone = form.phone.replace(/\D/g, "");
 
       const { error: leadError } = await supabase
         .from("leads")
@@ -57,7 +69,7 @@ export default function QuotePage() {
           id: leadId,
           full_name: form.fullName,
           business_name: form.businessName,
-          phone: form.phone,
+          phone: rawPhone,
           email: form.email || null,
           zip_code: form.zipCode,
           state: "unknown",
@@ -98,7 +110,7 @@ export default function QuotePage() {
         form_zip: form.zipCode,
         form_crew_size: form.crewSize,
         form_currently_insured: form.currentlyInsured === "yes",
-        form_phone: form.phone,
+        form_phone: rawPhone,
         form_email: form.email || null,
       });
 
