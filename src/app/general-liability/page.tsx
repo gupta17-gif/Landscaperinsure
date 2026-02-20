@@ -1,5 +1,29 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FAQSchema from "@/components/FAQSchema";
+
+const faqs = [
+  {
+    question: "How much does general liability insurance cost for landscapers?",
+    answer:
+      "Most landscaping businesses pay $45–$75 per month for a standard $1M/$2M general liability policy. Your rate depends on revenue, crew size, services offered, and claims history.",
+  },
+  {
+    question: "What does landscaper GL insurance cover?",
+    answer:
+      "GL insurance covers bodily injury to third parties, property damage caused by your work, and completed operations claims (damage that occurs after you've finished a job).",
+  },
+  {
+    question: "Is general liability required for landscapers?",
+    answer:
+      "While not always legally required by the state, virtually every commercial client, HOA, and property manager requires proof of GL insurance before hiring a landscaper. It's considered essential for any professional operation.",
+  },
+  {
+    question: "What's the difference between GL and workers' comp?",
+    answer:
+      "General liability covers claims from third parties (clients, their property, bystanders). Workers' comp covers your employees' injuries on the job. Most landscapers with employees need both.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "General Liability Insurance for Landscapers",
@@ -161,8 +185,33 @@ export default function GeneralLiabilityPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* FAQ */}
       <section className="py-16">
+        <div className="mx-auto max-w-4xl px-4">
+          <h2 className="text-3xl font-bold text-slate-900">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-8 space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-lg border border-slate-200 bg-white"
+              >
+                <summary className="cursor-pointer px-6 py-4 font-semibold text-slate-900 flex items-center justify-between">
+                  {faq.question}
+                  <span className="ml-2 text-slate-400 group-open:rotate-180 transition-transform">
+                    ▾
+                  </span>
+                </summary>
+                <p className="px-6 pb-4 text-slate-600">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-green-50 py-16">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-3xl font-bold text-slate-900">
             Get Covered in Minutes
@@ -178,6 +227,7 @@ export default function GeneralLiabilityPage() {
           </Link>
         </div>
       </section>
+      <FAQSchema faqs={faqs} />
     </div>
   );
 }

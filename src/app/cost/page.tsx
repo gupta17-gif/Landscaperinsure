@@ -1,5 +1,29 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FAQSchema from "@/components/FAQSchema";
+
+const faqs = [
+  {
+    question: "How much does landscaping insurance cost per month?",
+    answer:
+      "General liability insurance for landscapers typically costs $45–$75 per month for a $1M/$2M policy. Workers' comp runs $150–$400/month depending on payroll. Commercial auto is $100–$250/month.",
+  },
+  {
+    question: "Why is my landscaping insurance so expensive?",
+    answer:
+      "Higher premiums are usually driven by larger revenue, more employees, high-risk services (tree removal, excavation), past claims, or being in a high-litigation state like California or Florida. Bundling policies and maintaining a clean claims record can lower your rate.",
+  },
+  {
+    question: "Can I get landscaping insurance with no employees?",
+    answer:
+      "Yes. Solo operators can get general liability coverage starting around $45/month. You won't need workers' comp until you hire employees (requirements vary by state).",
+  },
+  {
+    question: "Is it cheaper to pay annually or monthly?",
+    answer:
+      "Most carriers offer a 5–10% discount for paying your premium annually upfront instead of monthly installments.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Landscaping Insurance Cost — How Much Do You Need to Pay?",
@@ -181,6 +205,31 @@ export default function CostPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-16">
+        <div className="mx-auto max-w-4xl px-4">
+          <h2 className="text-3xl font-bold text-slate-900">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-8 space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-lg border border-slate-200 bg-white"
+              >
+                <summary className="cursor-pointer px-6 py-4 font-semibold text-slate-900 flex items-center justify-between">
+                  {faq.question}
+                  <span className="ml-2 text-slate-400 group-open:rotate-180 transition-transform">
+                    ▾
+                  </span>
+                </summary>
+                <p className="px-6 pb-4 text-slate-600">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-green-50 py-16">
         <div className="mx-auto max-w-4xl px-4 text-center">
@@ -199,6 +248,7 @@ export default function CostPage() {
           </Link>
         </div>
       </section>
+      <FAQSchema faqs={faqs} />
     </div>
   );
 }
