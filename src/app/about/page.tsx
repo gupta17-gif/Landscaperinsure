@@ -34,7 +34,7 @@ export default function AboutPage() {
           </p>
           <p className="mt-4 text-lg text-slate-600">
             As a licensed insurance brokerage, we work for <strong>you</strong>,
-            not the insurance companies. We shop 30+ carriers to find the best
+            not the insurance companies. We shop multiple A-rated carriers to find the best
             rate for your specific situation.
           </p>
         </div>

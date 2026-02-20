@@ -89,7 +89,7 @@ export default function GeneralLiabilityPage() {
               "Customer slips on freshly-laid sod and breaks their wrist — $25,000 medical + legal",
             ].map((claim) => (
               <li key={claim} className="flex items-start gap-3">
-                <span className="mt-1 text-green-600 font-bold">!</span>
+                <span className="mt-1 text-green-600">&#x25CF;</span>
                 <span className="text-slate-700">{claim}</span>
               </li>
             ))}
@@ -112,11 +112,11 @@ export default function GeneralLiabilityPage() {
             for a standard $1M/$2M general liability policy. Your exact rate
             depends on:
           </p>
-          <ul className="mt-6 space-y-2 text-slate-700">
-            <li>• Revenue and number of employees</li>
-            <li>• Services offered (mowing vs. tree removal vs. hardscaping)</li>
-            <li>• Claims history</li>
-            <li>• State requirements and local regulations</li>
+          <ul className="mt-6 ml-5 list-disc space-y-2 text-slate-700">
+            <li>Revenue and number of employees</li>
+            <li>Services offered (mowing vs. tree removal vs. hardscaping)</li>
+            <li>Claims history</li>
+            <li>State requirements and local regulations</li>
           </ul>
           <Link
             href="/cost"

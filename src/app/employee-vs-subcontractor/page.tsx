@@ -87,7 +87,7 @@ export default function EmployeeVsSubcontractorPage() {
               "California AB5 and similar state laws have tightened classification rules",
             ].map((risk) => (
               <div key={risk} className="flex items-start gap-3">
-                <span className="mt-0.5 text-red-600 font-bold">!</span>
+                <span className="mt-0.5 text-red-600">&#x25CF;</span>
                 <span className="text-slate-700">{risk}</span>
               </div>
             ))}
@@ -102,19 +102,19 @@ export default function EmployeeVsSubcontractorPage() {
           </h2>
           <ul className="mt-8 space-y-4 text-slate-700">
             <li className="flex items-start gap-3">
-              <span className="text-green-600 font-bold">+</span>
+              <span className="text-green-600">&#x2714;</span>
               <span>Always get a COI from subcontractors <strong>before</strong> they start work</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-green-600 font-bold">+</span>
+              <span className="text-green-600">&#x2714;</span>
               <span>Use written subcontractor agreements that define the relationship</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-green-600 font-bold">+</span>
+              <span className="text-green-600">&#x2714;</span>
               <span>If you control their schedule, provide their tools, and they only work for you — they&apos;re probably an employee</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-green-600 font-bold">+</span>
+              <span className="text-green-600">&#x2714;</span>
               <span>When in doubt, classify as employee. The penalties for misclassification are severe.</span>
             </li>
           </ul>

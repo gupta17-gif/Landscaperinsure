@@ -33,12 +33,12 @@ export default function COIPage() {
             A Certificate of Insurance (COI) is a one-page document issued by
             your insurance carrier that summarizes your coverage. It shows:
           </p>
-          <ul className="mt-6 space-y-2 text-slate-700">
-            <li>• Your business name and address</li>
-            <li>• Policy number and effective dates</li>
-            <li>• Coverage types (GL, WC, auto, etc.)</li>
-            <li>• Policy limits ($1M per occurrence, $2M aggregate, etc.)</li>
-            <li>• Additional insured parties (if requested)</li>
+          <ul className="mt-6 ml-5 list-disc space-y-2 text-slate-700">
+            <li>Your business name and address</li>
+            <li>Policy number and effective dates</li>
+            <li>Coverage types (GL, WC, auto, etc.)</li>
+            <li>Policy limits ($1M per occurrence, $2M aggregate, etc.)</li>
+            <li>Additional insured parties (if requested)</li>
           </ul>
           <p className="mt-6 text-slate-600">
             It does <strong>not</strong> change your policy — it simply proves

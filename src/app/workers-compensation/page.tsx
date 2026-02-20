@@ -84,7 +84,7 @@ export default function WorkersCompPage() {
               "Insect stings and allergic reactions",
             ].map((injury) => (
               <li key={injury} className="flex items-start gap-3">
-                <span className="mt-0.5 text-red-500">!</span>
+                <span className="mt-0.5 text-red-500">&#x25CF;</span>
                 <span>{injury}</span>
               </li>
             ))}
@@ -167,7 +167,7 @@ export default function WorkersCompPage() {
           </h2>
           <p className="mt-4 text-lg text-slate-600">
             Get workers&apos; comp and GL quoted together — we&apos;ll find you the
-            best rate across 30+ carriers.
+            best rate across multiple A-rated carriers.
           </p>
           <Link
             href="/quote"

@@ -39,7 +39,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-slate-400">
-              No obligation · 2 minutes · Licensed broker
+              No obligation · 2 minutes · Licensed broker · CA #0F03649
             </p>
           </div>
         </div>

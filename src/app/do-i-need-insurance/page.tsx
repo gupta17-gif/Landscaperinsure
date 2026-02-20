@@ -42,7 +42,7 @@ export default function DoINeedInsurancePage() {
               "Want to grow your business and land bigger jobs",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <span className="mt-0.5 text-green-600 font-bold">+</span>
+                <span className="mt-0.5 text-green-600">&#x2714;</span>
                 <span>{item}</span>
               </li>
             ))}

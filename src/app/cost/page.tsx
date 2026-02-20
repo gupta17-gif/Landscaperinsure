@@ -160,7 +160,7 @@ export default function CostPage() {
               },
               {
                 title: "Use a broker (like us)",
-                desc: "We shop 30+ carriers to find the best rate — you'd only see one quote going direct.",
+                desc: "We shop multiple A-rated carriers to find the best rate — you'd only see one quote going direct.",
               },
               {
                 title: "Right-size your coverage",
