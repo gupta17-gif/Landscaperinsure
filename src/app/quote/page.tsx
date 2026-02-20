@@ -49,9 +49,12 @@ export default function QuotePage() {
       const now = new Date().toISOString();
       const pageUrl = window.location.href;
 
-      const { data: lead, error: leadError } = await supabase
+      const leadId = crypto.randomUUID();
+
+      const { error: leadError } = await supabase
         .from("leads")
         .insert({
+          id: leadId,
           full_name: form.fullName,
           business_name: form.businessName,
           phone: form.phone,
@@ -68,14 +71,12 @@ export default function QuotePage() {
           consent_language_version: CONSENT_LANGUAGE_VERSION,
           consent_scope: ["sms", "voice", "prerecorded", "transfer_to_partner"],
           lead_status: "consented",
-        })
-        .select("id")
-        .single();
+        });
 
       if (leadError) throw leadError;
 
       await supabase.from("compliance_log").insert({
-        lead_id: lead.id,
+        lead_id: leadId,
         event_type: "consent_given",
         channel: "web_form",
         consent_text: CONSENT_TEXT,
@@ -90,7 +91,7 @@ export default function QuotePage() {
       });
 
       await supabase.from("inbound_contacts").insert({
-        lead_id: lead.id,
+        lead_id: leadId,
         contact_type: "web_form",
         source_channel: "web_form",
         form_business_name: form.businessName,
