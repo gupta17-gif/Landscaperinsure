@@ -53,7 +53,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "InsuranceAgency",
   name: "LandscaperInsure",
-  legalName: "ContractorFlow Insurance Services",
+  legalName: "Pro Specialty Insurance",
   url: "https://landscaperinsure.com",
   description:
     "Licensed insurance brokerage specializing in affordable coverage for landscaping businesses nationwide.",
@@ -75,7 +75,7 @@ const structuredData = {
       "@type": "GovernmentOrganization",
       name: "California Department of Insurance",
     },
-    identifier: "0F03649",
+    identifier: "6006473",
   },
 };
 

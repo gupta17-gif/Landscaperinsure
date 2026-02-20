@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Contact LandscaperInsure",
   description:
-    "Get in touch with LandscaperInsure. Call, email, or request a callback. Licensed insurance broker — CA License #0F03649.",
+    "Get in touch with LandscaperInsure. Call, email, or request a callback. Licensed insurance broker — CA License #6006473.",
 };
 
 export default function ContactPage() {
@@ -50,7 +50,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-slate-900">License</h3>
                   <p className="mt-1 text-slate-600">
-                    California Insurance License #0F03649
+                    California Insurance License #6006473
                   </p>
                 </div>
               </div>

@@ -18,8 +18,8 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-semibold text-slate-900">1. Who We Are</h2>
             <p className="mt-3">
-              LandscaperInsure is operated by ContractorFlow Insurance Services, a licensed insurance
-              brokerage (CA License #0F03649). This policy explains how we collect, use, and
+              LandscaperInsure is operated by Pro Specialty Insurance, a licensed insurance
+              brokerage (CA License #6006473). This policy explains how we collect, use, and
               protect personal information when you use our website, forms, or communicate with us.
             </p>
           </section>

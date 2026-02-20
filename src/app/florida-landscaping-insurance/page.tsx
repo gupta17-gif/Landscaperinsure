@@ -109,31 +109,45 @@ export default function FloridaPage() {
           <h2 className="text-3xl font-bold text-slate-900">
             Typical Costs in Florida
           </h2>
-          <div className="mt-8 overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b-2 border-slate-200">
-                  <th className="py-3 pr-4 text-sm font-semibold text-slate-700">Coverage</th>
-                  <th className="py-3 text-sm font-semibold text-slate-700">Typical Monthly Cost</th>
-                </tr>
-              </thead>
-              <tbody className="text-slate-600">
-                <tr className="border-b border-slate-100">
-                  <td className="py-3 pr-4 font-medium text-slate-900">General Liability</td>
-                  <td className="py-3">$50–$80/mo</td>
-                </tr>
-                <tr className="border-b border-slate-100">
-                  <td className="py-3 pr-4 font-medium text-slate-900">Workers&apos; Comp</td>
-                  <td className="py-3">$180–$450/mo (varies by payroll)</td>
-                </tr>
-                <tr>
-                  <td className="py-3 pr-4 font-medium text-slate-900">Commercial Auto</td>
-                  <td className="py-3">$130–$300/mo</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                type: "General Liability",
+                range: "$50–$80",
+                period: "/mo",
+                detail: "$1M/$2M policy for most landscaping operations",
+              },
+              {
+                type: "Workers' Comp",
+                range: "$180–$450",
+                period: "/mo",
+                detail: "Required with 4+ employees in Florida",
+              },
+              {
+                type: "Commercial Auto",
+                range: "$130–$300",
+                period: "/mo",
+                detail: "Trucks, trailers, and equipment in transit",
+              },
+            ].map((item) => (
+              <div
+                key={item.type}
+                className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm"
+              >
+                <p className="text-sm font-medium text-slate-500">
+                  {item.type}
+                </p>
+                <p className="mt-2">
+                  <span className="text-3xl font-bold text-slate-900">
+                    {item.range}
+                  </span>
+                  <span className="text-lg text-slate-400">{item.period}</span>
+                </p>
+                <p className="mt-2 text-sm text-slate-500">{item.detail}</p>
+              </div>
+            ))}
           </div>
-          <p className="mt-4 text-sm text-slate-500">
+          <p className="mt-6 text-sm text-slate-500">
             Florida rates are above the national average due to high claim
             frequency and litigation costs.
           </p>

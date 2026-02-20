@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "California Landscaping Insurance — GL, Workers' Comp & More",
   description:
-    "Landscaping insurance in California. CSLB license requirements, workers' comp rules, and affordable GL coverage. Licensed CA broker #0F03649.",
+    "Landscaping insurance in California. CSLB license requirements, workers' comp rules, and affordable GL coverage. Licensed CA broker #6006473.",
 };
 
 export default function CaliforniaPage() {
@@ -27,7 +27,7 @@ export default function CaliforniaPage() {
             Get Your Free Quote
           </Link>
           <p className="mt-3 text-sm text-slate-400">
-            Licensed California Insurance Broker · CA #0F03649
+            Licensed California Insurance Broker · CA #6006473
           </p>
         </div>
       </section>
@@ -98,35 +98,51 @@ export default function CaliforniaPage() {
           <h2 className="text-3xl font-bold text-slate-900">
             Typical Costs in California
           </h2>
-          <div className="mt-8 overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b-2 border-slate-200">
-                  <th className="py-3 pr-4 text-sm font-semibold text-slate-700">Coverage</th>
-                  <th className="py-3 text-sm font-semibold text-slate-700">Typical Monthly Cost</th>
-                </tr>
-              </thead>
-              <tbody className="text-slate-600">
-                <tr className="border-b border-slate-100">
-                  <td className="py-3 pr-4 font-medium text-slate-900">General Liability</td>
-                  <td className="py-3">$55–$85/mo</td>
-                </tr>
-                <tr className="border-b border-slate-100">
-                  <td className="py-3 pr-4 font-medium text-slate-900">Workers&apos; Comp</td>
-                  <td className="py-3">$200–$500/mo (varies by payroll)</td>
-                </tr>
-                <tr className="border-b border-slate-100">
-                  <td className="py-3 pr-4 font-medium text-slate-900">Commercial Auto</td>
-                  <td className="py-3">$150–$300/mo</td>
-                </tr>
-                <tr>
-                  <td className="py-3 pr-4 font-medium text-slate-900">Contractor&apos;s Bond</td>
-                  <td className="py-3">$100–$500/year</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {[
+              {
+                type: "General Liability",
+                range: "$55–$85",
+                period: "/mo",
+                detail: "$1M/$2M policy for most landscaping operations",
+              },
+              {
+                type: "Workers' Comp",
+                range: "$200–$500",
+                period: "/mo",
+                detail: "Varies by payroll size and crew risk class",
+              },
+              {
+                type: "Commercial Auto",
+                range: "$150–$300",
+                period: "/mo",
+                detail: "Trucks, trailers, and equipment in transit",
+              },
+              {
+                type: "Contractor's Bond",
+                range: "$100–$500",
+                period: "/yr",
+                detail: "Required $25K surety bond for C-27 license",
+              },
+            ].map((item) => (
+              <div
+                key={item.type}
+                className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm"
+              >
+                <p className="text-sm font-medium text-slate-500">
+                  {item.type}
+                </p>
+                <p className="mt-2">
+                  <span className="text-3xl font-bold text-slate-900">
+                    {item.range}
+                  </span>
+                  <span className="text-lg text-slate-400">{item.period}</span>
+                </p>
+                <p className="mt-2 text-sm text-slate-500">{item.detail}</p>
+              </div>
+            ))}
           </div>
-          <p className="mt-4 text-sm text-slate-500">
+          <p className="mt-6 text-sm text-slate-500">
             California rates tend to be higher than the national average due to
             stricter regulations and higher claim frequency.
           </p>
@@ -145,7 +161,7 @@ export default function CaliforniaPage() {
             California&apos;s Landscaping Insurance Experts
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            As a licensed California broker (CA #0F03649), we know CA
+            As a licensed California broker (CA #6006473), we know CA
             requirements inside and out. Get compliant and covered.
           </p>
           <Link

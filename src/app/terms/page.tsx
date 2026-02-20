@@ -27,8 +27,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold text-slate-900">2. About Our Services</h2>
             <p className="mt-3">
-              LandscaperInsure is operated by ContractorFlow Insurance Services, a licensed
-              insurance brokerage (CA License #0F03649). We help landscaping businesses
+              LandscaperInsure is operated by Pro Specialty Insurance, a licensed
+              insurance brokerage (CA License #6006473). We help landscaping businesses
               obtain insurance quotes from multiple carriers. We are an insurance broker —
               we do not underwrite policies or handle premium payments.
             </p>
@@ -78,7 +78,7 @@ export default function TermsPage() {
             <h2 className="text-xl font-semibold text-slate-900">7. Intellectual Property</h2>
             <p className="mt-3">
               All content on this website — including text, graphics, logos, and software
-              — is the property of ContractorFlow Insurance Services and is protected by
+              — is the property of Pro Specialty Insurance and is protected by
               copyright and trademark laws.
             </p>
           </section>

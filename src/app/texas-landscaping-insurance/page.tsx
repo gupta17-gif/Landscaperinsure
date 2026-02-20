@@ -100,31 +100,45 @@ export default function TexasPage() {
           <h2 className="text-3xl font-bold text-slate-900">
             Typical Costs in Texas
           </h2>
-          <div className="mt-8 overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b-2 border-slate-200">
-                  <th className="py-3 pr-4 text-sm font-semibold text-slate-700">Coverage</th>
-                  <th className="py-3 text-sm font-semibold text-slate-700">Typical Monthly Cost</th>
-                </tr>
-              </thead>
-              <tbody className="text-slate-600">
-                <tr className="border-b border-slate-100">
-                  <td className="py-3 pr-4 font-medium text-slate-900">General Liability</td>
-                  <td className="py-3">$45–$70/mo</td>
-                </tr>
-                <tr className="border-b border-slate-100">
-                  <td className="py-3 pr-4 font-medium text-slate-900">Workers&apos; Comp</td>
-                  <td className="py-3">$150–$350/mo (varies by payroll)</td>
-                </tr>
-                <tr>
-                  <td className="py-3 pr-4 font-medium text-slate-900">Commercial Auto</td>
-                  <td className="py-3">$120–$280/mo</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                type: "General Liability",
+                range: "$45–$70",
+                period: "/mo",
+                detail: "$1M/$2M policy for most landscaping operations",
+              },
+              {
+                type: "Workers' Comp",
+                range: "$150–$350",
+                period: "/mo",
+                detail: "Varies by payroll size and crew risk class",
+              },
+              {
+                type: "Commercial Auto",
+                range: "$120–$280",
+                period: "/mo",
+                detail: "Trucks, trailers, and equipment in transit",
+              },
+            ].map((item) => (
+              <div
+                key={item.type}
+                className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm"
+              >
+                <p className="text-sm font-medium text-slate-500">
+                  {item.type}
+                </p>
+                <p className="mt-2">
+                  <span className="text-3xl font-bold text-slate-900">
+                    {item.range}
+                  </span>
+                  <span className="text-lg text-slate-400">{item.period}</span>
+                </p>
+                <p className="mt-2 text-sm text-slate-500">{item.detail}</p>
+              </div>
+            ))}
           </div>
-          <p className="mt-4 text-sm text-slate-500">
+          <p className="mt-6 text-sm text-slate-500">
             Texas rates are generally at or slightly below the national average
             for landscaping GL.
           </p>

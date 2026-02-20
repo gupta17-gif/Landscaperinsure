@@ -17,7 +17,7 @@ export default function Footer() {
               Licensed broker, A-rated carriers.
             </p>
             <p className="mt-2 text-sm font-medium text-slate-600">
-              CA License #0F03649
+              CA License #6006473
             </p>
           </div>
 
@@ -152,11 +152,11 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 border-t border-slate-200 pt-6 text-center text-sm text-slate-400">
           <p>
-            LandscaperInsure is operated by ContractorFlow Insurance Services |
+            LandscaperInsure is operated by Pro Specialty Insurance |
             Licensed Insurance Brokerage
           </p>
           <p className="mt-1 font-medium text-slate-500">
-            CA License #0F03649
+            CA License #6006473
           </p>
           <p className="mt-1">
             © {new Date().getFullYear()} LandscaperInsure. All rights reserved.

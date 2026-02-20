@@ -39,7 +39,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-slate-400">
-              No obligation · 2 minutes · Licensed broker · CA #0F03649
+              No obligation · 2 minutes · Licensed broker · CA #6006473
             </p>
           </div>
         </div>
@@ -256,11 +256,17 @@ export default function Home() {
             {[
               {
                 title: "Contract Language Expertise",
-                desc: "We match your policy to HOA, city, and GC contract requirements — Additional Insured, Waiver of Subrogation, Primary & Noncontributory.",
+                desc: "We handle the endorsements that direct carriers can't — so your COI gets accepted the first time.",
+                endorsements: [
+                  "Additional Insured (CG 20 10 / CG 20 37)",
+                  "Waiver of Subrogation",
+                  "Primary & Noncontributory",
+                  "Completed Operations coverage confirmation",
+                ],
               },
               {
                 title: "Same-Day COIs",
-                desc: "Need a Certificate of Insurance for a job tomorrow? We handle it fast — often same-day turnaround.",
+                desc: "Need a Certificate of Insurance for a job tomorrow? We handle it fast — often same-day turnaround, including custom endorsements for HOAs and GCs.",
               },
               {
                 title: "Underwriting Nuance",
@@ -274,6 +280,19 @@ export default function Home() {
               <div key={item.title} className="rounded-lg border border-slate-200 p-6">
                 <h3 className="font-semibold text-slate-900">{item.title}</h3>
                 <p className="mt-2 text-slate-600">{item.desc}</p>
+                {"endorsements" in item && item.endorsements && (
+                  <ul className="mt-3 space-y-1">
+                    {item.endorsements.map((e) => (
+                      <li
+                        key={e}
+                        className="flex items-start gap-2 text-sm text-slate-600"
+                      >
+                        <span className="mt-0.5 text-green-600">✓</span>
+                        {e}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About LandscaperInsure",
   description:
-    "LandscaperInsure is a licensed insurance brokerage dedicated to helping landscaping businesses get affordable coverage. CA License #0F03649.",
+    "LandscaperInsure is a licensed insurance brokerage dedicated to helping landscaping businesses get affordable coverage. CA License #6006473.",
 };
 
 export default function AboutPage() {
@@ -27,9 +27,9 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl px-4">
           <h2 className="text-3xl font-bold text-slate-900">Who We Are</h2>
           <p className="mt-4 text-lg text-slate-600">
-            LandscaperInsure is operated by ContractorFlow Insurance Services, a
+            LandscaperInsure is operated by Pro Specialty Insurance, a
             licensed Property &amp; Casualty insurance brokerage. We hold a
-            California insurance license (#0F03649) and serve landscaping
+            California insurance license (#6006473) and serve landscaping
             businesses in all 50 states through our carrier network.
           </p>
           <p className="mt-4 text-lg text-slate-600">
@@ -94,7 +94,7 @@ export default function AboutPage() {
               },
               {
                 title: "Licensed & Regulated",
-                desc: "We're a fully licensed insurance brokerage (CA License #0F03649), regulated by the California Department of Insurance. We carry E&O insurance and follow all state compliance requirements.",
+                desc: "We're a fully licensed insurance brokerage (CA License #6006473), regulated by the California Department of Insurance. We carry E&O insurance and follow all state compliance requirements.",
               },
               {
                 title: "Transparent Compensation",
